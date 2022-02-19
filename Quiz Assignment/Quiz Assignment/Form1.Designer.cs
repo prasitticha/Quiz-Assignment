@@ -61,7 +61,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(662, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(634, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,7 +97,7 @@
             this.ColumnList,
             this.ColumnIncome,
             this.ColumnExpenses});
-            this.dataGridView1.Location = new System.Drawing.Point(304, 47);
+            this.dataGridView1.Location = new System.Drawing.Point(278, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(342, 230);
@@ -120,7 +120,7 @@
             // 
             // textBoxList
             // 
-            this.textBoxList.Location = new System.Drawing.Point(142, 47);
+            this.textBoxList.Location = new System.Drawing.Point(116, 41);
             this.textBoxList.Name = "textBoxList";
             this.textBoxList.Size = new System.Drawing.Size(121, 23);
             this.textBoxList.TabIndex = 4;
@@ -128,7 +128,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 50);
+            this.label1.Location = new System.Drawing.Point(27, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 15);
             this.label1.TabIndex = 5;
@@ -137,7 +137,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 79);
+            this.label2.Location = new System.Drawing.Point(27, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 15);
             this.label2.TabIndex = 7;
@@ -145,7 +145,7 @@
             // 
             // textBoxIncome
             // 
-            this.textBoxIncome.Location = new System.Drawing.Point(142, 76);
+            this.textBoxIncome.Location = new System.Drawing.Point(116, 70);
             this.textBoxIncome.Name = "textBoxIncome";
             this.textBoxIncome.Size = new System.Drawing.Size(121, 23);
             this.textBoxIncome.TabIndex = 6;
@@ -153,7 +153,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 108);
+            this.label3.Location = new System.Drawing.Point(27, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 9;
@@ -162,7 +162,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(142, 134);
+            this.button2.Location = new System.Drawing.Point(116, 128);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 23);
             this.button2.TabIndex = 11;
@@ -172,7 +172,7 @@
             // 
             // textBoxExpenses
             // 
-            this.textBoxExpenses.Location = new System.Drawing.Point(142, 105);
+            this.textBoxExpenses.Location = new System.Drawing.Point(116, 99);
             this.textBoxExpenses.Name = "textBoxExpenses";
             this.textBoxExpenses.Size = new System.Drawing.Size(121, 23);
             this.textBoxExpenses.TabIndex = 12;
@@ -231,7 +231,7 @@
             this.groupBox1.Controls.Add(this.Total_Expenses);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(44, 163);
+            this.groupBox1.Location = new System.Drawing.Point(18, 157);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(229, 114);
             this.groupBox1.TabIndex = 18;
@@ -243,7 +243,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(662, 293);
+            this.ClientSize = new System.Drawing.Size(634, 285);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxExpenses);
             this.Controls.Add(this.button2);
