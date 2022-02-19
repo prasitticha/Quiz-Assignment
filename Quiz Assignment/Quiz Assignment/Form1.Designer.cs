@@ -43,21 +43,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textBoxExpenses = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Total_Income = new System.Windows.Forms.TextBox();
+            this.Total_Expenses = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(688, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(662, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -93,10 +97,10 @@
             this.ColumnList,
             this.ColumnIncome,
             this.ColumnExpenses});
-            this.dataGridView1.Location = new System.Drawing.Point(309, 47);
+            this.dataGridView1.Location = new System.Drawing.Point(304, 47);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(345, 200);
+            this.dataGridView1.Size = new System.Drawing.Size(342, 230);
             this.dataGridView1.TabIndex = 2;
             // 
             // ColumnList
@@ -157,10 +161,10 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(142, 134);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 55);
+            this.button2.Size = new System.Drawing.Size(121, 23);
             this.button2.TabIndex = 11;
             this.button2.Text = "ADD";
             this.button2.UseVisualStyleBackColor = true;
@@ -173,28 +177,28 @@
             this.textBoxExpenses.Size = new System.Drawing.Size(121, 23);
             this.textBoxExpenses.TabIndex = 12;
             // 
-            // textBox2
+            // Total_Income
             // 
-            this.textBox2.AllowDrop = true;
-            this.textBox2.Location = new System.Drawing.Point(142, 195);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(121, 23);
-            this.textBox2.TabIndex = 13;
+            this.Total_Income.AllowDrop = true;
+            this.Total_Income.Location = new System.Drawing.Point(97, 23);
+            this.Total_Income.Name = "Total_Income";
+            this.Total_Income.ReadOnly = true;
+            this.Total_Income.Size = new System.Drawing.Size(121, 23);
+            this.Total_Income.TabIndex = 13;
             // 
-            // textBox3
+            // Total_Expenses
             // 
-            this.textBox3.AllowDrop = true;
-            this.textBox3.Location = new System.Drawing.Point(142, 224);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(121, 23);
-            this.textBox3.TabIndex = 14;
+            this.Total_Expenses.AllowDrop = true;
+            this.Total_Expenses.Location = new System.Drawing.Point(97, 52);
+            this.Total_Expenses.Name = "Total_Expenses";
+            this.Total_Expenses.ReadOnly = true;
+            this.Total_Expenses.Size = new System.Drawing.Size(121, 23);
+            this.Total_Expenses.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 198);
+            this.label4.Location = new System.Drawing.Point(8, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 15);
             this.label4.TabIndex = 15;
@@ -203,21 +207,44 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(53, 227);
+            this.label5.Location = new System.Drawing.Point(8, 55);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 15);
             this.label5.TabIndex = 16;
             this.label5.Text = "Total Expenses";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(97, 81);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "CLEAR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.Total_Income);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Total_Expenses);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(44, 163);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(229, 114);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Total Income, Expenses";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 274);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.ClientSize = new System.Drawing.Size(662, 293);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxExpenses);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
@@ -233,6 +260,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,10 +283,12 @@
         private Label label3;
         private Button button2;
         private TextBox textBoxExpenses;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox Total_Income;
+        private TextBox Total_Expenses;
         private ToolStripMenuItem saveToolStripMenuItem;
         private Label label4;
         private Label label5;
+        private Button button1;
+        private GroupBox groupBox1;
     }
 }

@@ -8,6 +8,7 @@ namespace Quiz_Assignment
         int NUM2 = 0;
         int NUM3 = 0;
         int NUM4 = 0;
+        private string filePath;
 
         //AllDATA oQA = new AllDATA();
         public Form1()
@@ -15,33 +16,14 @@ namespace Quiz_Assignment
             InitializeComponent();
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+    private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "CSV (*.csv) | *.csv";
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string[] readAllLine = File.ReadAllLines(openFileDialog.FileName);
-                /*
-                string readAllText = File.ReadAllText(openFileDialog.FileName);
-                //this.textBox1.Text = readAllText;
-                //this.dataGridView1.Rows.Add();
-                */
-
-                for(int i = 0; i < readAllLine.Length; i++)
-                {
-                    string allDATARAW = readAllLine[i];
-                    string[] allDATASplited = allDATARAW.Split(',');
-                    AllDATA allDATA = new AllDATA(allDATASplited[0], allDATASplited[1], allDATASplited[2]);
-                    //addDataToGridView(AllDATAS);
-                    //TODO: Add AllDATA object to DataGridView
-                }
-            }
         }
+
         private void addDataToGridView(string List, string Income, string Expenses)
         {
-            //this.dataGridView1.Rows.Add(new string[] { List, Income, Expenses });
+            this.dataGridView1.Rows.Add(new string[] { List, Income, Expenses });
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -57,8 +39,8 @@ namespace Quiz_Assignment
             NUM1 = NUM2 + NUM1;
             NUM3 = NUM4 + NUM3;
 
-            textBox2.Text = NUM1.ToString();
-            textBox3.Text = NUM3.ToString();
+            Total_Income.Text = NUM1.ToString();
+            Total_Expenses.Text = NUM3.ToString();
 
             textBoxList.Text = "";
             textBoxIncome.Text = "";
@@ -104,5 +86,10 @@ namespace Quiz_Assignment
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Total_Income.Text = "";
+            Total_Expenses.Text = "";
+        }
     }
 }
