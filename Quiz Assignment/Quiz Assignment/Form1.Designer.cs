@@ -49,6 +49,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -57,11 +58,12 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(634, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(633, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,20 +73,20 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click_1);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click_1);
             // 
@@ -97,7 +99,7 @@
             this.ColumnList,
             this.ColumnIncome,
             this.ColumnExpenses});
-            this.dataGridView1.Location = new System.Drawing.Point(278, 41);
+            this.dataGridView1.Location = new System.Drawing.Point(270, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(342, 230);
@@ -120,6 +122,7 @@
             // 
             // textBoxList
             // 
+            this.textBoxList.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxList.Location = new System.Drawing.Point(116, 41);
             this.textBoxList.Name = "textBoxList";
             this.textBoxList.Size = new System.Drawing.Size(121, 23);
@@ -128,23 +131,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(27, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 15);
+            this.label1.Size = new System.Drawing.Size(26, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "List";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(27, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 15);
+            this.label2.Size = new System.Drawing.Size(49, 15);
             this.label2.TabIndex = 7;
             this.label2.Text = "Income";
             // 
             // textBoxIncome
             // 
+            this.textBoxIncome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxIncome.Location = new System.Drawing.Point(116, 70);
             this.textBoxIncome.Name = "textBoxIncome";
             this.textBoxIncome.Size = new System.Drawing.Size(121, 23);
@@ -153,15 +159,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(27, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 15);
+            this.label3.Size = new System.Drawing.Size(58, 15);
             this.label3.TabIndex = 9;
             this.label3.Text = "Expenses";
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(116, 128);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 23);
@@ -172,6 +179,7 @@
             // 
             // textBoxExpenses
             // 
+            this.textBoxExpenses.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxExpenses.Location = new System.Drawing.Point(116, 99);
             this.textBoxExpenses.Name = "textBoxExpenses";
             this.textBoxExpenses.Size = new System.Drawing.Size(121, 23);
@@ -200,7 +208,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(8, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 15);
+            this.label4.Size = new System.Drawing.Size(79, 15);
             this.label4.TabIndex = 15;
             this.label4.Text = "Total Income";
             // 
@@ -209,13 +217,13 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(8, 55);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 15);
+            this.label5.Size = new System.Drawing.Size(88, 15);
             this.label5.TabIndex = 16;
             this.label5.Text = "Total Expenses";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(97, 81);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 23);
@@ -231,6 +239,7 @@
             this.groupBox1.Controls.Add(this.Total_Expenses);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(18, 157);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(229, 114);
@@ -238,12 +247,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Total Income, Expenses";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(634, 285);
+            this.ClientSize = new System.Drawing.Size(633, 287);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxExpenses);
             this.Controls.Add(this.button2);
@@ -290,5 +303,6 @@
         private Label label5;
         private Button button1;
         private GroupBox groupBox1;
+        private OpenFileDialog openFileDialog1;
     }
 }

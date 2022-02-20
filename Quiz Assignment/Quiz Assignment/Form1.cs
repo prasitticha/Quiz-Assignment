@@ -1,5 +1,21 @@
 using System.Text;
 
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using System.Linq;
+using System.Drawing;
+using System.ComponentModel;
+using System.Collections.Generic;
+using System.IO;
+using System;
+
+
+
+
+
+
+
 namespace Quiz_Assignment
 {
     public partial class Form1 : Form
@@ -8,7 +24,8 @@ namespace Quiz_Assignment
         int NUM2 = 0;
         int NUM3 = 0;
         int NUM4 = 0;
-        private string filePath;
+
+        public object Helper { get; private set; }
 
         //AllDATA oQA = new AllDATA();
         public Form1()
@@ -16,10 +33,6 @@ namespace Quiz_Assignment
             InitializeComponent();
         }
 
-    private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void addDataToGridView(string List, string Income, string Expenses)
         {
@@ -90,6 +103,24 @@ namespace Quiz_Assignment
         {
             Total_Income.Text = "";
             Total_Expenses.Text = "";
+        }
+
+        private void openToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "CSV (*.csv) | *.csv";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string[] readAllLine = File.ReadAllLines(openFileDialog.FileName);
+
+                string readAllText = File.ReadAllText(openFileDialog.FileName);
+                for (int i = 0; i < readAllLine.Length; i++)
+                {
+                    string allDATARAW = readAllLine[i];
+                    string[] allDATASplited = allDATARAW.Split(',');
+                    this.dataGridView1.Rows.Add(allDATASplited[0], allDATASplited[1], allDATASplited[2]);
+                }
+            }
         }
     }
 }

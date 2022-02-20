@@ -4,13 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Quiz_Assignment
 {
     internal class AllDATA
     {
-        private string _id;
-        private string _name;
-        private string _major;
+
+
+
+
+
+
+
+
+        private string _List;
+        private string _Income;
+        private string _Expenses;
 
         private int NUM1 = 0;
         private int NUM2 = 0;
@@ -18,16 +27,18 @@ namespace Quiz_Assignment
         private int NUM4 = 0;
 
         //constructor
-        public AllDATA(string id,string name, string major)
+        public AllDATA(string List, string Income, string Expenses)
         {
-            this._id = id;
-            this._name = name;
-            this._major = major;
+            this._List = List;
+            this._Income = Income;
+            this._Expenses = Expenses;
         }
 
-        public string getId() { return this._id; }
-        public string getName() { return this._name; }
-        public string getMajor() { return this._major; }
+        public string getList() { return this._List; }
+        public string getIncome() { return this._Income; }
+        public string getExpenses() { return this._Expenses; }
+
+
 
         public void addDATA(double gpa, string name)
         {
